@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Surpresa para Você 💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+      color: #880e4f;
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    .box-inicio {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #fff0f5cc;
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(184, 33, 122, 0.3);
+      max-width: 400px;
+      width: 100%;
+      margin: 20px auto;
+      animation: fadeIn 1.2s ease forwards;
+      text-align: center;
+    }
+
+    .box-inicio h1 {
+      font-weight: 900;
+      font-size: 2.4em;
+      margin-bottom: 12px;
+      background: linear-gradient(90deg, #d81b60, #880e4f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.06em;
+      text-shadow: 2px 2px 10px rgba(184, 33, 122, 0.4);
+    }
+
+    .box-inicio p {
+      font-size: 1.1em;
+      margin-bottom: 35px;
+      font-style: italic;
+      color: #a64d79;
+      line-height: 1.4;
+    }
+
+    .btn-surpresa {
+      font-size: 1.3em;
+      font-weight: 700;
+      padding: 16px 40px;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(90deg, #ad1457, #880e4f);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(184, 33, 122, 0.6);
+      transition: background-color 0.35s ease, transform 0.25s ease;
+      letter-spacing: 0.03em;
+    }
+
+    .btn-surpresa:hover {
+      background: linear-gradient(90deg, #880e4f, #ad1457);
+      transform: scale(1.05);
+    }
+
+    .rodape {
+      background: #fff0f5;
+      color: #a04562;
+      text-align: center;
+      padding: 20px 10px;
+      border-top: 2px solid #f8bbd0;
+      box-shadow: inset 0 4px 8px rgba(255, 182, 193, 0.15);
+      font-size: 1em;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) {
+      .box-inicio {
+        padding: 30px 25px;
+        max-width: 90%;
+      }
+      .box-inicio h1 {
+        font-size: 1.8em;
+      }
+      .box-inicio p {
+        font-size: 1em;
+        margin-bottom: 25px;
+      }
+      .btn-surpresa {
+        font-size: 1.1em;
+        padding: 14px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box-inicio">
+    <h1>Oi, meu amor! 💕</h1>
+    <p>Tenho uma surpresa especial para você. Está pronto para ver?</p>
+    <button class="btn-surpresa" onclick="abrirSurpresa()">Sim, quero ver!</button>
+  </div>
+
+  <script>
+    function abrirSurpresa() {
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <footer class="rodape">
+    <p>Com amor, Lara.</p>
+    <p>&copy; Direitos reservados para o Sr. Gustavo</p>
+  </footer>
+</body>
+</html>

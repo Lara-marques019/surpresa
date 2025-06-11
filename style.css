@@ -1,50 +1,213 @@
+/* Fonte e fundo */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to bottom, #ffe6e6, #fff0f5);
-    color: #5c2a2a;
-    text-align: center;
-    padding: 20px;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe6f0, #fff0f5);
+  color: #4b1e2f;
+  padding: 20px;
+}
+
+/* Container principal */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+  text-align: left;
+}
+
+/* Título */
+.titulo {
+  font-size: 3.2em;
+  background: linear-gradient(90deg, #f06292, #ec407a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  text-align: left;
+  padding: 20px 0;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 8px rgba(232, 72, 132, 0.4);
+  letter-spacing: 0.05em;
+  white-space: normal;
+  overflow-x: visible;
+}
+
+/* Subtítulo */
+.subtitulo {
+  font-size: 1.6em;
+  color: #a64d79;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 30px;
+  text-align: left;
+  letter-spacing: 0.02em;
+}
+
+/* Galeria de imagens */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.gallery figure {
+  margin: 0;
+  max-width: 90%;
+  text-align: center;
+  background-color: #ffffffcc;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery figure:hover {
+  transform: scale(1.02);
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gallery figcaption {
+  margin-top: 12px;
+  font-size: 1.1em;
+  color: #d81b60;
+  background: #ffe6f0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px #ffffffcc;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Mensagem */
+.message {
+  background-color: #ffffffcc;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1.1em;
+  line-height: 1.7;
+  backdrop-filter: blur(6px);
+  text-align: left;
+}
+
+/* Contador de tempo juntos */
+.contador {
+  max-width: 500px;
+  margin: 40px auto 20px;
+  padding: 20px 30px;
+  background-color: #fff7fb;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(200, 80, 120, 0.15);
+  text-align: center;
+  color: #c2185b;
+  font-weight: 600;
+  user-select: none;
+}
+
+.contador p {
+  font-size: 1.2em;
+  margin: 0 0 10px 0;
+  color: #a13a5d;
+  font-weight: 500;
+}
+
+#tempo-juntos {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #d81b60;
+  letter-spacing: 0.02em;
+}
+
+/* Rodapé */
+.rodape {
+  background: #fff0f5;
+  color: #a04562;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 60px;
+  border-top: 2px solid #f8bbd0;
+  box-shadow: inset 0 4px 8px rgba(255, 182, 193, 0.15);
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: #c2185b;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  h1, .titulo {
+    font-size: 2em;
+    padding: 0 10px;
   }
-  
+
   .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 0 10px;
   }
-  
+
+  .gallery figure {
+    max-width: 100%;
+    padding: 10px;
+  }
+
   .gallery img {
-    width: 250px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
+    width: 100%;
   }
-  
-  .gallery img:hover {
-    transform: scale(1.05);
+
+  .gallery figcaption {
+    font-size: 0.95em;
+    padding: 6px 8px;
   }
-  
+
   .message {
-    font-size: 1.2em;
-    line-height: 1.6;
-    background-color: #ffffffaa;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 1em;
+    padding: 15px;
   }
-  
+
+  .container {
+    padding: 10px;
+  }
+
+  .subtitulo {
+    font-size: 1.1em;
+  }
+
+  .contador {
+    max-width: 90%;
+    padding: 15px 20px;
+  }
+
+  .contador p {
+    font-size: 1.1em;
+  }
+
+  #tempo-juntos {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 400px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
