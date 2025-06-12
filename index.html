@@ -112,14 +112,16 @@
   <div class="box-inicio">
     <h1>Oi, meu amor! 💕</h1>
     <p>Tenho uma surpresa especial para você. Está pronto para ver?</p>
-    <button class="btn-surpresa" onclick="abrirSurpresa()">Sim, quero ver!</button>
+    <button class="btn-surpresa" id="verSurpresa">Sim, quero ver!</button>
+
   </div>
 
-  <script>
-    function abrirSurpresa() {
-      window.location.href = "inicio.html";
-    }
-  </script>
+ <script>
+  document.getElementById("verSurpresa").addEventListener("click", function () {
+    window.location.href = "inicio.html";
+  });
+</script>
+
 
   <footer class="rodape">
     <p>Com amor, Lara.</p>
